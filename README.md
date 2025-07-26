@@ -2,8 +2,8 @@
 
 ## Calculate Your Age Precisely, Instantly.
 
-![AgeCalco Hero Section Screenshot](https://via.placeholder.com/800x400?text=AgeCalco+Hero+Section+Screenshot)
-*Replace this with an actual screenshot of your hero section.*
+![AgeCalco Hero Section Screenshot]()
+
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -45,8 +45,7 @@ The project features a clean UI inspired by contemporary design trends, smooth t
 ## Live Demo
 
 You can see a live version of this project hosted on GitHub Pages:
-[https://your-username.github.io/your-repo-name/](https://your-username.github.io/your-repo-name/)
-*(Remember to replace `your-username` and `your-repo-name` with your actual GitHub Pages URL)*
+[live demo](https://piyush181105.github.io/CodeAlpha_my-age-calco/)
 
 ---
 
@@ -87,3 +86,48 @@ To get a local copy up and running, follow these simple steps.
 ---
 
 ## Project Structure
+age-calculator/
+├── index.html          # Main HTML file for the website structure
+├── style.css           # All CSS styles for layout and design
+├── script.js           # JavaScript for interactivity and logic
+└── quotes.json         # JSON file containing quotes for the dynamic display
+---
+
+## Usage
+
+1.  Open `index.html` in your web browser.
+2.  Click the "Get Started" button (or "Try Now" in the navbar, or "Calculate Age" in the bottom CTA) to reveal the age calculator.
+3.  Enter your date of birth in the provided input field.
+4.  Click the "Calculate Age" button. Your precise age will be displayed along with a fresh inspiring quote.
+5.  Click "Calculate Again" to clear the input and get another quote.
+6.  Click "Learn More" to open a modal detailing the calculator's features, how it works, and fun facts.
+
+---
+
+## Contributing
+
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+---
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information. 
+
+---
+
+## Contact
+
+Piyush- [piyushjaiswal1805@gmail.com]
+
+Project Link: [link](https://piyush181105.github.io/CodeAlpha_my-age-calco/)
+
