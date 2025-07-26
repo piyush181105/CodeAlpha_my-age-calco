@@ -1,0 +1,709 @@
+/* Universal Styles & Body */
+html {
+    scroll-behavior: smooth; /* For smooth scrolling to sections */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8faff; /* Lighter background for the entire page to make card stand out */
+    color: #333; /* Darker text for readability */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Helper Class - Changed for modal compatibility */
+.hidden {
+    display: none; /* Removed !important here for modal to override */
+}
+
+/* --- Header / Navbar --- */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+.navbar .logo sup {
+    font-size: 0.5em;
+    vertical-align: super;
+    margin-left: 2px;
+    color: #666;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #000;
+}
+
+.try-now-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Pill shape */
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.try-now-btn:hover {
+    background-color: #333;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    text-align: center;
+    padding: 120px 20px;
+    background-color: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%); /* Subtle gradient */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* SVG icon in hero section */
+.hero-svg-icon {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    margin: 0 auto 20px auto; /* Center and provide bottom margin */
+}
+
+.hero-svg-icon svg {
+    width: 100%;
+    height: auto;
+    fill: #333; /* Dark color for light background */
+}
+
+
+.hero-section h1 {
+    font-size: 3.5em; /* Larger title */
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.hero-section .tagline {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary-btn {
+    background-color: #000;
+    color: #fff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.primary-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #333;
+    padding: 12px 28px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.secondary-btn:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    transform: translateY(-2px);
+}
+
+/* --- Age Calculator Section (Image 2 styles) --- */
+.age-calculator-container {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Ensure it takes up sufficient height */
+    background: linear-gradient(180deg, #f8faff 0%, #ebf2ff 100%); /* Subtle gradient background */
+}
+
+.age-calculator-card {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05); /* Enhanced shadow */
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Max width for the card */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.age-calculator-card h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.hourglass-icon {
+    font-size: 3.5em; /* Larger icon */
+    color: #000000; /* Changed from #007bff to black */
+    margin-bottom: 25px;
+}
+
+.input-label {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Space between input and button */
+    margin-bottom: 30px;
+}
+
+.dob-input {
+    flex-grow: 1; /* Allows input to take available space */
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px; /* Rounded input */
+    font-size: 1.1em;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dob-input:focus {
+    border-color: #000000; /* Changed from #007bff to black */
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2); /* Changed from rgba(0, 123, 255, 0.2) to black with transparency */
+}
+
+/* Style for the date picker icon */
+.dob-input::-webkit-calendar-picker-indicator {
+    /* If you want this icon to be black, you might need to remove this filter or adjust it */
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg); /* Tints the icon blue by default on some browsers */
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.calculate-btn {
+    background-color: #40505f; /* Changed from #007bff to a dark grey */
+    color: rgb(243, 241, 241); /* Keeping text white/off-white */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.calculate-btn:hover {
+    background-color: #000000; /* Changed from #0056b3 to black */
+    transform: translateY(-2px);
+}
+
+.result-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.result-label {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.age-display {
+    font-size: 2em; /* Larger age display */
+    font-weight: 700;
+    color: #000000; /* Changed from #007bff to black */
+    margin-bottom: 20px;
+    min-height: 1.2em;
+}
+
+.quote {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+}
+
+.author {
+    color: #999;
+    font-size: 0.85em;
+    margin-bottom: 25px;
+}
+
+.calculate-again-btn {
+    background-color: #40505f; /* Changed from #e0f2ff (light blue) to dark grey */
+    color: #ffffff; /* Changed from #007bff to white */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calculate-again-btn:hover {
+    background-color: #000000; /* Changed from #cce7ff to black */
+    transform: translateY(-2px);
+}
+
+/* --- Features Section --- */
+.features-section {
+    padding: 80px 20px;
+    background-color: #f8faff;
+}
+
+.features-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card .icon-placeholder {
+    font-size: 3em;
+    color: #999;
+    margin-bottom: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px auto;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* --- Call to Action Section --- */
+.call-to-action-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #ffffff;
+    background: linear-gradient(180deg, #f8faff 0%, #ebf2ff 100%);
+}
+
+.call-to-action-section h2 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.call-to-action-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #000;
+    color: #aaa;
+    padding: 60px 0;
+    font-size: 0.9em;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* SVG icon in footer */
+.footer-svg-icon {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.footer-svg-icon svg {
+    width: 100%;
+    height: auto;
+    fill: #eee;
+}
+
+.footer-right {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+/* --- Modal Styles --- */
+.modal {
+    display: none; /* Hidden by default - JS will change this */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally (requires display: flex/grid) */
+    align-items: center; /* Center vertically (requires display: flex/grid) */
+    padding: 20px; /* Padding around modal content */
+    box-sizing: border-box; /* Include padding in dimensions */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* For older browsers / fallback positioning */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    max-width: 800px; /* Max width of the modal */
+    width: 100%; /* Take full width up to max-width */
+    position: relative; /* For the close button positioning */
+    animation-name: animatemodal;
+    animation-duration: 0.4s;
+    overflow-y: auto; /* Enable scrolling for content if it overflows */
+    max-height: 90vh; /* Limit modal height */
+}
+
+/* Animation for modal appearance */
+@keyframes animatemodal {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Styles for content inside modal (reusing some from previous learn-more-section) */
+.modal-content h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-details-block {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.modal-details-block h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.modal-details-block p {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.modal-details-block ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin-left: 20px; /* Indent for custom bullet */
+}
+
+.modal-details-block ul li {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+}
+
+.modal-details-block ul li:before {
+    content: '✓'; /* Custom checkmark bullet */
+    position: absolute;
+    left: 0;
+    color: #000; /* Black checkmark */
+    font-weight: bold;
+}
+
+.modal-cta {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.modal-cta h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+
+/* --- Responsive Design for Modal --- */
+@media (max-width: 850px) {
+    .modal-content {
+        max-width: 90%; /* Wider on smaller screens */
+        padding: 30px;
+    }
+    .modal-content h2 {
+        font-size: 2em;
+        margin-bottom: 30px;
+    }
+    .modal-details-block h3 {
+        font-size: 1.4em;
+    }
+    .modal-details-block p, .modal-details-block ul li {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 550px) {
+    .modal {
+        padding: 10px; /* Less padding on very small screens */
+    }
+    .modal-content {
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .modal-content h2 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .modal-details-block {
+        margin-bottom: 20px;
+    }
+    .modal-details-block h3 {
+        font-size: 1.2em;
+    }
+    .modal-cta h3 {
+        font-size: 1.5em;
+    }
+    .close-button {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+
+/* --- Responsive Design for general layout --- */
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .navbar nav ul {
+        gap: 20px;
+    }
+    .hero-section h1 {
+        font-size: 2.5em;
+    }
+    .hero-section .tagline {
+        font-size: 1.2em;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .primary-btn, .secondary-btn {
+        width: 100%;
+        max-width: 250px;
+    }
+    .age-calculator-card {
+        padding: 30px;
+    }
+    .features-section .container {
+        grid-template-columns: 1fr; /* Stack cards on small screens */
+    }
+    .footer .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-right {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .footer-column {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .logo {
+        font-size: 20px;
+    }
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .try-now-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .hero-section {
+        padding: 80px 20px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section .tagline {
+        font-size: 1em;
+    }
+    .age-calculator-section {
+        padding: 40px 15px;
+    }
+    .age-calculator-section h2 {
+        font-size: 1.8em;
+    }
+    .hourglass-icon {
+        font-size: 2.8em;
+    }
+    .input-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .dob-input, .calculate-btn {
+        width: 100%;
+        max-width: 300px; /* Limit input width on small screens */
+    }
+    .result-label {
+        font-size: 1.1em;
+    }
+    .age-display {
+        font-size: 1.8em;
+    }
+    .quote, .author {
+        font-size: 0.8em;
+    }
+    .feature-card {
+        padding: 30px 20px;
+    }
+    .call-to-action-section {
+        padding: 60px 20px;
+    }
+    .call-to-action-section h2 {
+        font-size: 2em;
+    }
+}
