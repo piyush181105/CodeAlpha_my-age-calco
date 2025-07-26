@@ -2,7 +2,7 @@
 
 ## Calculate Your Age Precisely, Instantly.
 
-![AgeCalco Hero Section Screenshot]()
+![AgeCalco Hero Section Screenshot](age-calculator-ss.jpg)
 
 
 ## Table of Contents
